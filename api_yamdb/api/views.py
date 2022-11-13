@@ -1,4 +1,5 @@
 import random
+
 from rest_framework import filters, mixins, status, viewsets
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
@@ -15,14 +16,14 @@ from .permissions import (
     AdminOrReadOnly, GetAuthenticatedPatchAdminOrAuthor,
     OnlyReadOrСhangeAuthorAdminModerator,
     OwnIsAuthenticatedAndIsAdmin)
+
 from .paginations import CustomPagination
 from .serializers import (
     UserSignupSerializer, CategorySerializer,
     CommentSerializer, GenreSerializer,
-    GenreSerializer, ReadTitleSerializer,
-    ReviewSerializer, TokenSerializer,
-    UserSerializer, UserMeSerializer,
-    WriteTitleSerializer)
+    ReadTitleSerializer, ReviewSerializer,
+    TokenSerializer, UserSerializer,
+    UserMeSerializer, WriteTitleSerializer)
 
 
 class UserViewSet(viewsets.ModelViewSet):
